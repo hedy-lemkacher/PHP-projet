@@ -1,0 +1,24 @@
+# Render service configuration (minimal)
+# After pushing, create the service on Render or let Render detect this file.
+
+services:
+  - type: web
+    name: php-projet
+    env: docker
+    repo: https://github.com/hedy-lemkacher/PHP-projet.git
+    branch: main
+    dockerfile_path: Dockerfile
+    buildCommand: composer install --no-dev --optimize-autoloader
+    startCommand: bash -lc "php bin/console doctrine:migrations:migrate --no-interaction || true; php -S 0.0.0.0:$PORT -t public"
+    envVars:
+      - key: APP_ENV
+        value: prod
+
+databases:
+  - name: mon-projet-db
+    engine: postgresql
+    plan: starter
+
+# Do NOT commit secrets in this repo. Set secrets (APP_SECRET, DATABASE_URL) in
+# Render dashboard or using the Render CLI after creating the service.
+secrets: []
