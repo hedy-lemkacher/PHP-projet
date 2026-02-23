@@ -215,6 +215,8 @@ php scripts/create-sqlite-database.php
 
 Pour plus de détails, consultez :
 - **[APRES_CLONAGE.md](APRES_CLONAGE.md)** - Guide d'installation détaillé
+- **[DEPLOIEMENT_ALWAYSDATA.md](DEPLOIEMENT_ALWAYSDATA.md)** - Mise en ligne sans carte bancaire (Alwaysdata + SQLite)
+- **[DEPLOIEMENT_RENDER.md](DEPLOIEMENT_RENDER.md)** - Déploiement via Render
 - **[docs/SCHEMA_ARCHITECTURE.md](docs/SCHEMA_ARCHITECTURE.md)** - Architecture et schéma de la base de données
 
 ## 👥 Contributeurs
