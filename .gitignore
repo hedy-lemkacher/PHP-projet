@@ -1,0 +1,13 @@
+.env.local
+.env.test.local
+.env
+/vendor/
+/var/
+node_modules
+
+# Symfony / PHP
+/public/build/
+/symfony.lock
+/.idea/
+.vscode/
+.env.local.php

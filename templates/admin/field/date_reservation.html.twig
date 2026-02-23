@@ -1,0 +1,6 @@
+{% if field.value %}
+    {{ field.value|date('d/m/Y H:i') }}
+{% else %}
+    <span class="text-muted">-</span>
+{% endif %}
+
