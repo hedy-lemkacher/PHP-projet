@@ -4,10 +4,10 @@
 services:
   - type: web
     name: php-projet
-    env: docker
+    runtime: docker
     branch: main
-    dockerfile_path: Dockerfile
-    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    autoDeployTrigger: commit
     envVars:
       - key: APP_ENV
         value: prod
@@ -22,9 +22,7 @@ services:
 
 databases:
   - name: mon-projet-db
-    engine: postgresql
     plan: starter
 
 # Do NOT commit secrets in this repo. Additional secrets can be set in
 # the Render dashboard or using the Render CLI after creating the service.
-secrets: []
